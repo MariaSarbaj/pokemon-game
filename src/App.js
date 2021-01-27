@@ -1,17 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import Layout from "./components/layout/layout";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World, ReactJS.
-        </p>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Header
+                title="This is title"
+                descr="This is Description!"
+            />
+
+            <Layout
+                id="layout1"
+                title="First Layout"
+                descr="This is Description!"
+                urlBg
+            />
+
+            <Layout
+                id="layout2"
+                title="Second Layout"
+                descr="This is Description!"
+                colorBg
+            />
+
+            <Layout
+                id="layout3"
+                title="Third Layout"
+                descr="This is Description!"
+                urlBg
+            />
+
+            <Footer />
+        </>
+    )
 }
 
 export default App;
