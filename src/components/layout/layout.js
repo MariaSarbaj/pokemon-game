@@ -1,10 +1,9 @@
 import style from './layout.module.css';
-import bg1 from '../../assets/bg1.jpg'
 
 const Layout = ({ id, title, descr, urlBg, colorBg}) => {
-    const styleBg = urlBg ? { backgroundImage: `url(${bg1})` } :
+    const styleBg = urlBg ? { backgroundImage: `url(${urlBg})` } :
         colorBg ?
-            { backgroundColor: `#74e1ff` } : {};
+            { backgroundColor: `${colorBg}` } : {};
 
     return (
         <section className={style.root} id={id} style={styleBg}>
