@@ -1,6 +1,6 @@
 import style from './layout.module.css';
 
-const Layout = ({ id, title, descr, urlBg, colorBg}) => {
+const Layout = ({ id, title, descr, urlBg, colorBg, children}) => {
     const styleBg = urlBg ? { backgroundImage: `url(${urlBg})` } :
         colorBg ?
             { backgroundColor: `${colorBg}` } : {};
@@ -25,6 +25,7 @@ const Layout = ({ id, title, descr, urlBg, colorBg}) => {
                                 {descr}
                             </p>)
                         }
+                        {children}
                     </div>
                 </article>
             </div>
